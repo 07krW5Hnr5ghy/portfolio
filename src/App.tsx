@@ -1,16 +1,30 @@
 import React from 'react';
 import Home from './Pages/Home';
+import About from './Pages/About';
+import Projects from './Pages/Projects';
+import Skills from './Pages/Skills';
+import Contact from './Pages/Contact';
+
 function App() {
   return (
     <div id="Main_container">
-      <header></header>
-      <nav></nav>
+      <nav>navbar</nav>
       <main>
-        <section id="home"></section>
-        <section id="about"></section>
-        <section id="skills"></section>
-        <section id="projects"></section>
-        <section id="contact"></section>
+        <section id="home">
+          <Home/>
+        </section>
+        <section id="about">
+          <About/>
+        </section>
+        <section id="skills">
+          <Skills/>
+        </section>
+        <section id="projects">
+          <Projects/>
+        </section>
+        <section id="contact">
+          <Contact/>
+        </section>
       </main>
     </div>
   );
