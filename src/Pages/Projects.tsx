@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import Project from '../components/Project';
 import slides from '../slides';
-import {Slide} from '../interfaces';
 
 const Projects = () => {
     const [page,setPage] = useState<number>(0);
@@ -11,7 +10,6 @@ const Projects = () => {
     const previous = () => {
         setPage(page - 1);
     };
-    console.log(slides);
     return(
         <div id="Projects_container">
             <h1>Projects</h1>
