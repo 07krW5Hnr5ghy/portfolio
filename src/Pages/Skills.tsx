@@ -1,5 +1,5 @@
 import Logohtml from '../assets/html-5.svg';
-import Logocss from '../assets/css10.svg';
+import Logocss from '../assets/css-3.svg';
 import Logojs from '../assets/logo-javascript.svg';
 import LogoNode from '../assets/nodejs-icon.svg';
 import LogoReact from '../assets/react-2.svg';
