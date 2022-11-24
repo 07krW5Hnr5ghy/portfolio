@@ -1,14 +1,18 @@
 import emailjs from '@emailjs/browser';
-import {useRef, useState} from 'react';
+import {useRef} from 'react';
+
 
 const Contact = () => {
+    const serviceId : string = process.env.REACT_APP_SERVICE_ID!;
+    const templateId : string = process.env.REACT_APP_TEMPLATE_ID!;
+    const apiKey : string = process.env.REACT_APP_API_KEY!;
+    
     const form = useRef<HTMLFormElement>(null!);
     const message = useRef<HTMLTextAreaElement>(null!);
    
-    const sendEmail = (e : React.FormEvent<HTMLFormElement>) => {
+    const sendEmail  = (e : React.FormEvent)  => {
         e.preventDefault();
-
-        emailjs.sendForm('service_pmfv9nm','template_m68eqct',form.current,'XJ6wIMDe9lpdEMCi0')
+        emailjs.sendForm(serviceId,templateId,form.current,apiKey)
         .then((result)=>{
             console.log('sended message');
             message.current.value = "";
@@ -16,11 +20,11 @@ const Contact = () => {
             console.log(error);
         });
     }
-    console.log(message);
+
     return(
         <div id="Contact_container">
             <h1>Contact</h1>
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={(e) => sendEmail(e)}>
                 <label>Message</label>
                 <textarea ref={message} name="message" onChange={(e) => {
                     message.current.value = e.target.value;

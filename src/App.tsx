@@ -6,6 +6,7 @@ import Skills from './Pages/Skills';
 import Contact from './Pages/Contact';
 
 function App() {
+  console.log(process.env.REACT_APP_SERVICE_ID);
   return (
     <div id="Main_container">
       <nav>navbar</nav>
