@@ -1,7 +1,5 @@
 // ui settings
-@use './base/global';
-@use './base/fonts';
-@use './base/colors';
+@forward './base';
 // views
 @use './Pages/About';
 @use './Pages/Contact';
