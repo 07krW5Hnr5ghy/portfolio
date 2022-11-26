@@ -9,18 +9,23 @@ function App() {
   return (
     <div className="grid">
       <aside className="grid__sidebar">
-        <nav>nav</nav>
+        <div className='grid__widget'>
+          <section id="home">
+            <Home/>
+          </section>
+        </div>
+        <div className='grid__widget'>
+          <section id="about">
+            <About/>
+          </section>
+        </div>
+        <div className='grid__widget'>
+          <section id="skills">
+           <Skills/>
+          </section>
+        </div>
       </aside>
       <main className='grid__main'>
-        <section id="home">
-          <Home/>
-        </section>
-        <section id="about">
-          <About/>
-        </section>
-        <section id="skills">
-          <Skills/>
-        </section>
         <section id="projects">
           <Projects/>
         </section>

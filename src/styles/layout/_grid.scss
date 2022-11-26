@@ -1,31 +1,57 @@
+@use '../base/breakpoints' as b;
+@use '../base/functions' as f;
+
 .grid{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:auto auto;
-    gap:40px;
+    gap:f.rem(40);
     //max-width: 1000px;
-    width: min(100% - 40px,1000px);
+    width: min(100% - f.rem(40),f.rem(1000));
     margin-inline: auto;
 
-    @media(min-width:900px){
-        grid-template-columns: 2fr 1fr;
+    @media(min-width:f.rem(900)){
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: auto auto;
     }
 
-    @media(max-width:899px){
-        padding-left: 20px;
-        padding-right: 20px;
+    @media(max-width:f.rem(899)){
+        padding-left: f.rem(20);
+        padding-right: f.rem(20);
+    }
+
+    @include b.breakpoint(large){
+        grid-template-columns:1fr 2fr;
+        grid-template-rows:auto;
     }
 
     &__main,
     &__sidebar{
-        padding: 40px;
+        padding: f.rem(40);
     }
     &__main{
         background-color: hsl(240, 94%, 27%);
+        @include b.breakpoint(medium){
+            background-color: hsl(120, 92%, 15%);
+        }
+        @include b.breakpoint(large){
+            background-color: hsl(39, 94%, 28%);
+        }
     }
 
     &__sidebar{
+        
+        
+        @include b.breakpoint-down(medium){
+            text-align: center;
+        }
+
+        @include b.breakpoint-down(small){
+            text-align: right;
+        }
+    }
+
+    &__widget{
         background-color: hsl(300, 95%, 33%);
     }
 }
