@@ -7,9 +7,11 @@ import Contact from './Pages/Contact';
 
 function App() {
   return (
-    <div id="Main_container">
-      <nav>navbar</nav>
-      <main>
+    <div className="grid">
+      <aside className="grid__sidebar">
+        <nav>nav</nav>
+      </aside>
+      <main className='grid__main'>
         <section id="home">
           <Home/>
         </section>
