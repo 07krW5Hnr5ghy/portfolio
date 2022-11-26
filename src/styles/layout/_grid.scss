@@ -1,6 +1,10 @@
 @use '../base/breakpoints' as b;
 @use '../base/functions' as f;
 
+%widget{
+    padding:f.rem(16);
+}
+
 .grid{
     display: grid;
     grid-template-columns: 1fr;
@@ -52,7 +56,8 @@
     }
 
     &__widget{
-        background-color: hsl(300, 95%, 33%);
+        
+       
     }
 }
 
