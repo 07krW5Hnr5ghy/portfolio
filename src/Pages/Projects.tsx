@@ -13,10 +13,12 @@ const Projects = () => {
     return(
         <div id="Projects_container">
             <h1>Projects</h1>
-            <div>
-                {page === slides.length - 1 ? null : <button value={`>`} onClick={next} />}
+            <div id="Projects_slider">
                 <Project {...slides[page]}/>
-                {!page ? null : <button onClick={previous} value={`<`}/>}
+                <div id="Buttons_container">
+                    {page === slides.length - 1 ? null : <div className='Buttons_slider' onClick={next} >{"next >>"}</div>}
+                    {!page ? null : <div className='Buttons_slider' onClick={previous}>{"<< previous"}</div>}
+                </div>
             </div>
         </div>
     )

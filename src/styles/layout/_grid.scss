@@ -9,20 +9,20 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:auto auto;
-    gap:f.rem(40);
+    gap:f.rem(60);
     //max-width: 1000px;
-    width: min(100% - f.rem(40),f.rem(1000));
+    width: min(100% - f.rem(20),f.rem(1000));
     margin-inline: auto;
 
-    @media(min-width:f.rem(900)){
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto auto;
-    }
+    // @media(min-width:f.rem(900)){
+    //     grid-template-columns: 1fr 2fr;
+    //     grid-template-rows: auto auto;
+    // }
 
-    @media(max-width:f.rem(899)){
-        padding-left: f.rem(20);
-        padding-right: f.rem(20);
-    }
+    // @media(max-width:f.rem(899)){
+    //     padding-left: f.rem(20);
+    //     padding-right: f.rem(20);
+    // }
 
     @include b.breakpoint(large){
         grid-template-columns:1fr 2fr;
@@ -31,15 +31,15 @@
 
     &__main,
     &__sidebar{
-        padding: f.rem(40);
+        padding: f.rem(20);
     }
     &__main{
-        background-color: hsl(240, 94%, 27%);
+        //background-color: hsl(240, 94%, 27%);
         @include b.breakpoint(medium){
-            background-color: hsl(120, 92%, 15%);
+            //background-color: hsl(120, 92%, 15%);
         }
         @include b.breakpoint(large){
-            background-color: hsl(39, 94%, 28%);
+            //background-color: hsl(39, 94%, 28%);
         }
     }
 
@@ -51,13 +51,16 @@
         }
 
         @include b.breakpoint-down(small){
-            text-align: right;
+            text-align: left;
         }
     }
 
     &__widget{
-        
-       
+        @extend %widget;
+    }
+
+    &__head{
+        padding-top: 0;
     }
 }
 

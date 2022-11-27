@@ -11,13 +11,13 @@ const Skills = () => {
         <div id="Skills_container">
             <h1>Skills</h1>
             <div id="Techs_container">
-                <img src={Logohtml} alt="html" width={100} height={100}/> 
-                <img src={Logocss} alt="css" width={100} height={100}/> 
-                <img src={Logojs} alt="js" width={100} height={100}/>
-                <img src={LogoNode} alt="node" width={100} height={100}/>
-                <img src={LogoReact} alt="react" width={100} height={100}/>
-                <img src={LogoExpress} alt="express" width={100} height={100}/>
-                <img src={LogoPostgres} alt="postgress" width={100} height={100}/>
+                <img src={Logohtml} alt="html" /> 
+                <img src={Logocss} alt="css" /> 
+                <img src={Logojs} alt="js" />
+                <img src={LogoNode} alt="node" />
+                <img src={LogoReact} alt="react" />
+                <img src={LogoExpress} alt="express" />
+                <img src={LogoPostgres} alt="postgress" />
             </div>
         </div>
     )

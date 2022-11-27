@@ -1,0 +1,32 @@
+@use '../base/functions' as f;
+@use '../base/breakpoints' as b;
+#Contact_container{
+    //background-color: red;
+    width:  min(100%,f.rem(1000));
+    height: min(30%,f.rem(800));
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: space-around;
+        input,textarea{
+            border-radius: f.rem(10);
+            border-color: var(--border-color);
+        }
+        input{
+            width:  min(100%,f.rem(500));
+            height: min(30%,f.rem(400));
+        }
+        label{
+            margin: f.rem(10);
+        }
+        textarea{
+            width:  min(100%,f.rem(500));
+            height: min(f.rem(100),f.rem(400));
+        }
+        input[type="submit"]{
+            margin: f.rem(20) 0;
+            padding: f.rem(10);
+        }
+    }
+}

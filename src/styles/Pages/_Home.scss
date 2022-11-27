@@ -1,0 +1,8 @@
+@use '../base/functions' as f;
+#Home_container{
+    img{
+        border-radius: f.rem(10);
+        width: f.rem(100);
+        height: f.rem(130);
+    }
+}

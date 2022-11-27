@@ -1,10 +1,11 @@
 import {Slide} from '../interfaces';
 
-const Project = ({title,image} : Slide) => {
+const Project = ({title,image,link} : Slide) => {
     return(
-        <div>
+        <div id="Project_container">
             <h3>{title}</h3>
-            <img src={image} alt="" width={100} height={50}/>
+            <img src={image} alt=""/>
+            <a href={link}>{`>> Check it out here <<`}</a>
         </div>
     );
 };

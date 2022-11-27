@@ -1,19 +1,21 @@
 @use '../base/breakpoints' as b;
 @use '../base/functions' as f;
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 :root{
     --title-font:'Orbitron', sans-serif;
+    --text-font:'Michroma', sans-serif;
 }
 
 h1,h2,h3{
     font-weight: 700;
     line-height: 1.1;
     margin-top:0;
+    font-family: var(--title-font);
 }
 
 h1{
-    font-family: var(--title-font);
     font-size:clamp(f.rem(28),f.rem(16) + 2vw,f.rem(40));
 }
 
@@ -21,13 +23,21 @@ h2{
     font-size:clamp(f.rem(22),f.rem(14) + 1.5vw,f.rem(36));
 }
 
-p{
+p,label,input{
     margin-top:0;
     font-size: f.rem(16);
+    font-family: var(--text-font);
+}
+
+input[type="submit"]{
+    font-size: f.rem(20);
+    font-weight: 600;
 }
 
 a, 
 a:visited,
 a:active{
     text-decoration: none;
+    font-size: f.rem(20);
+    font-family: var(--text-font);
 }
