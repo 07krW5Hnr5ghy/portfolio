@@ -3,8 +3,10 @@ import Logocss from '../assets/css-3.svg';
 import Logojs from '../assets/logo-javascript.svg';
 import LogoNode from '../assets/nodejs-icon.svg';
 import LogoReact from '../assets/react-2.svg';
-import LogoExpress from '../assets/express.png';
+import LogoExpress from '../assets/express.svg';
 import LogoPostgres from '../assets/postgresql.svg';
+import LogoSass from '../assets/sass.svg';
+import LogoRedux from '../assets/redux.svg';
 
 const Skills = () => {
     return(
@@ -18,6 +20,8 @@ const Skills = () => {
                 <img src={LogoReact} alt="react" />
                 <img src={LogoExpress} alt="express" />
                 <img src={LogoPostgres} alt="postgress" />
+                <img src={LogoSass} alt="sass"/>
+                <img src={LogoRedux} alt="redux"/>
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import {useRef} from 'react';
-
+import linkedin from '../assets/linkedin.svg';
+import github from '../assets/github.svg';
 
 const Contact = () => {
     const serviceId : string = process.env.REACT_APP_SERVICE_ID!;
@@ -30,15 +31,23 @@ const Contact = () => {
             <h1>Contact me</h1>
             <form ref={form} onSubmit={(e) => sendEmail(e)}>
                 <label>Name</label>
-                <input ref={name} type="text" name="name"/>
+                <input ref={name} type="text" name="name" required/>
                 <label>E-mail</label>
-                <input ref={email} type="email" name="email"/>
+                <input ref={email} type="email" name="email" required/>
                 <label>Message</label>
-                <textarea ref={message} name="message" onChange={(e) => {
+                <textarea ref={message} name="message" required onChange={(e) => {
                     message.current.value = e.target.value;
                 }}/>
                 <input type="submit" value="Send"/>
             </form>
+            <div id="Contact_social">
+                <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253">
+                    <img src={linkedin} alt="linkedin"/>
+                </a>
+                <a href="https://github.com/07krW5Hnr5ghy">
+                    <img src={github} alt="github"/>
+                </a>
+            </div>
         </div>
     )
 }

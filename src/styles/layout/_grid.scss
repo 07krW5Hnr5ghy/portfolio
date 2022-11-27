@@ -7,9 +7,9 @@
 
 .grid{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows:auto auto;
-    gap:f.rem(60);
+    gap:f.rem(90);
     //max-width: 1000px;
     width: min(100% - f.rem(20),f.rem(1000));
     margin-inline: auto;
