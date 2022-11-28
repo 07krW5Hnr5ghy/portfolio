@@ -5,8 +5,8 @@ const About = () => {
             <p>Help-desk agent with 3 years and 9 months of work experience in Point of Sale systems support.
             <br/>
             <br/>
-            My interests are the technologies currently in use on internet and their workings, now i am improving my skills in 
-            the technologies those i have already used and learning new technologies to implement in my projects </p>
+            I am interested in the technologies currently used on the internet, and their inner workings. Now, I am improving my technological skills, and learning new technologies to further my career and projects.
+            </p>
         </div>
     );
 }
