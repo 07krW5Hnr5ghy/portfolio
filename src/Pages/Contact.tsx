@@ -1,5 +1,7 @@
 import emailjs from '@emailjs/browser';
 import {useRef} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import linkedin from '../assets/linkedin.svg';
 import github from '../assets/github.svg';
 
@@ -17,13 +19,19 @@ const Contact = () => {
         e.preventDefault();
         emailjs.sendForm(serviceId,templateId,form.current,apiKey)
         .then((result)=>{
-            console.log('sended message');
-            message.current.value = "";
-            email.current.value = "";
-            name.current.value = "";
+            toast.success('message succesfully sent',{
+                position:toast.POSITION.TOP_RIGHT,
+                className:'toast'
+            });
         },(error) => {
-            console.log(error);
+            toast.error('can\'t send message try again later',{
+                position:toast.POSITION.TOP_RIGHT,
+                className:'toast',
+            });
         });
+        message.current.value = "";
+        email.current.value = "";
+        name.current.value = "";
     }
 
     return(
@@ -40,6 +48,7 @@ const Contact = () => {
                 }}/>
                 <input type="submit" value="Send"/>
             </form>
+            <ToastContainer/>
             <div id="Contact_social">
                 <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253">
                     <img src={linkedin} alt="linkedin"/>

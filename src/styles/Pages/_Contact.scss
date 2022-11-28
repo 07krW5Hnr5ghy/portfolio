@@ -44,4 +44,8 @@
             width: f.rem(50);
         }
     }
+    .toast{
+        background-color: var(--panel-color);
+        color:var(--border-color);
+    }
 }
