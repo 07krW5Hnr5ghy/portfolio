@@ -51,10 +51,10 @@ const Contact = () => {
             <ToastContainer/>
             <div id="Contact_social">
                 <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253">
-                    <img src={linkedin} alt="linkedin"/>
+                    <img src={linkedin} alt="linkedin" loading='lazy'/>
                 </a>
                 <a href="https://github.com/07krW5Hnr5ghy">
-                    <img src={github} alt="github"/>
+                    <img src={github} alt="github" loading='lazy'/>
                 </a>
             </div>
         </div>

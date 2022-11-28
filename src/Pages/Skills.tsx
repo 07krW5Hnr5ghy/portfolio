@@ -13,15 +13,15 @@ const Skills = () => {
         <div id="Skills_container">
             <h1>Skills</h1>
             <div id="Techs_container">
-                <img src={Logohtml} alt="html" /> 
-                <img src={Logocss} alt="css" /> 
-                <img src={Logojs} alt="js" />
-                <img src={LogoNode} alt="node" />
-                <img src={LogoReact} alt="react" />
-                <img src={LogoExpress} alt="express" />
-                <img src={LogoPostgres} alt="postgress" />
-                <img src={LogoSass} alt="sass"/>
-                <img src={LogoRedux} alt="redux"/>
+                <img src={Logohtml} alt="html" loading='lazy' /> 
+                <img src={Logocss} alt="css" loading='lazy'/> 
+                <img src={Logojs} alt="js" loading='lazy'/>
+                <img src={LogoNode} alt="node" loading='lazy'/>
+                <img src={LogoReact} alt="react" loading='lazy'/>
+                <img src={LogoExpress} alt="express" loading='lazy'/>
+                <img src={LogoPostgres} alt="postgress" loading='lazy'/>
+                <img src={LogoSass} alt="sass" loading='lazy'/>
+                <img src={LogoRedux} alt="redux" loading='lazy'/>
             </div>
         </div>
     )
