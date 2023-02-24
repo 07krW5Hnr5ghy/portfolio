@@ -8,7 +8,7 @@ const slides : Slide[] = [{
 },{
     title:'E-Commerce Express Clothes',
     image:require('../src/assets/project02.png'),
-    link:'https://express-clothes.vercel.app',
+    link:'https://express-test-liard.vercel.app',
     backend:'https://github.com/07krW5Hnr5ghy/PI-Pokemon-main',
     frontend:'https://github.com/Carsefer/PF-Clothes-Client',
 }];

@@ -11,18 +11,19 @@
     grid-template-rows:auto auto;
     gap:f.rem(90);
     //max-width: 1000px;
+    
     width: min(100% - f.rem(20),f.rem(1000));
     margin-inline: auto;
 
-    // @media(min-width:f.rem(900)){
-    //     grid-template-columns: 1fr 2fr;
-    //     grid-template-rows: auto auto;
-    // }
+    @media(min-width:f.rem(900)){
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+    }
 
-    // @media(max-width:f.rem(899)){
-    //     padding-left: f.rem(20);
-    //     padding-right: f.rem(20);
-    // }
+    @media(max-width:f.rem(899)){
+        padding-left: f.rem(20);
+        padding-right: f.rem(20);
+    }
 
     @include b.breakpoint(large){
         grid-template-columns:1fr 2fr;
