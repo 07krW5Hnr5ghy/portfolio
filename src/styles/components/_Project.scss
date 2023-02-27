@@ -1,17 +1,25 @@
 @use '../base/functions' as f;
-#Project_container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: f.rem(20);
-    img{
-        border-radius: f.rem(10);
-        width:  min(100%,f.rem(1000));
-        height: min(50%,f.rem(800));
-    }
-    a, 
-    a:visited,
-    a:active{
-        margin: f.rem(5) f.rem(10);
-    }
+.project-card{
+    border: 1px solid black;
+    margin: f.rem(16) 0 f.rem(16) 0;
 }
+
+.project-picture{
+    width: 100%;
+}
+// #Project_container{
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+//     font-size: f.rem(20);
+//     img{
+//         border-radius: f.rem(10);
+//         width:  min(100%,f.rem(1000));
+//         height: min(50%,f.rem(800));
+//     }
+//     a, 
+//     a:visited,
+//     a:active{
+//         margin: f.rem(5) f.rem(10);
+//     }
+// }

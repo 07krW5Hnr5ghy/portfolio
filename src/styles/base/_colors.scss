@@ -1,42 +1,42 @@
-:root{
-    --background-color:#020314;
-    --title-color:#5932e6;
-    --text-color:#8632e6;
-    --fields-color:#b332e6;
-    --border-color:#e032e6;
-    --panel-color:#5932e6;
-}
+// :root{
+//     --background-color:#020314;
+//     --title-color:#5932e6;
+//     --text-color:#8632e6;
+//     --fields-color:#b332e6;
+//     --border-color:#e032e6;
+//     --panel-color:#5932e6;
+// }
 
-.magenta{
-    background-color: hsl(300, 95%, 33%);
-}
-.green{
-    background-color: hsl(120, 100%, 19%);
-}
+// .magenta{
+//     background-color: hsl(300, 95%, 33%);
+// }
+// .green{
+//     background-color: hsl(120, 100%, 19%);
+// }
 
-h1,h2,h3{
-    color:var(--title-color);
-}
+// h1,h2,h3{
+//     color:var(--title-color);
+// }
 
-label{
-    color:var(--fields-color);
-}
+// label{
+//     color:var(--fields-color);
+// }
 
-input,textarea{
-    background-color: var(--fields-color);
-}
+// input,textarea{
+//     background-color: var(--fields-color);
+// }
 
-input[type="submit"]{
-    color:var(--background-color);
-}
+// input[type="submit"]{
+//     color:var(--background-color);
+// }
 
-input[type="submit"]:hover{
-    color:var(--border-color);
-    background-color: var(--text-color);
-}
+// input[type="submit"]:hover{
+//     color:var(--border-color);
+//     background-color: var(--text-color);
+// }
 
-a, 
-a:visited,
-a:active{
-    color:var(--border-color);
-}
+// a, 
+// a:visited,
+// a:active{
+//     color:var(--border-color);
+// }
