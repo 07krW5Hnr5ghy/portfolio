@@ -1,0 +1,40 @@
+@use '../base/functions' as f;
+
+.detail-container{
+    border: 1px solid black;
+    margin:10pt 20pt 10pt 20pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--title-font);
+}
+
+.detail-title{
+    text-align: center;
+}
+
+.detail-image{
+    width: 80%;
+    height: 20%;    
+}
+
+.detail-stack{
+    display: flex;
+    //border:1px solid black;
+    margin:f.rem(8) 0 0 0;
+    width: 80%;
+    height: 20%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.detail-tech{
+    margin:f.rem(4) f.rem(12) f.rem(4) f.rem(8);
+    padding: 0 f.rem(8) f.rem(4) f.rem(12);
+    border: 1px solid black;
+}
+
+.detail-link{
+    display: flex;
+    flex-direction: column;
+}
