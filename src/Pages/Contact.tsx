@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import {useRef} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import linkedin from '../assets/linkedin.svg';
+import { LinkedIn,GitHub } from '@mui/icons-material';
 import github from '../assets/github.svg';
 
 const Contact = () => {
@@ -35,26 +35,26 @@ const Contact = () => {
     }
 
     return(
-        <div id="Contact_container">
-            <h1>Contact me</h1>
-            <form ref={form} onSubmit={(e) => sendEmail(e)}>
-                <label>Name</label>
-                <input ref={name} type="text" name="name" required/>
-                <label>E-mail</label>
-                <input ref={email} type="email" name="email" required/>
-                <label>Message</label>
-                <textarea ref={message} name="message" required onChange={(e) => {
+        <div className="contact-container">
+            <h1 className="contact-title">Contact me</h1>
+            <form ref={form} onSubmit={(e) => sendEmail(e)} className="contact-form">
+                <label className="contact-label">Name</label>
+                <input className="contact-input" ref={name} type="text" name="name" required/>
+                <label className="contact-label">E-mail</label>
+                <input className="contact-input" ref={email} type="email" name="email" required/>
+                <label className="contact-label">Message</label>
+                <textarea className="contact-input" ref={message} name="message" required onChange={(e) => {
                     message.current.value = e.target.value;
                 }}/>
-                <input type="submit" value="Send"/>
+                <input className="contact-submit" type="submit" value="Send"/>
             </form>
             <ToastContainer/>
-            <div id="Contact_social">
-                <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253">
-                    <img src={linkedin} alt="linkedin" loading='lazy'/>
+            <div className="social-container">
+                <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253" className="social-icons">
+                    <LinkedIn fontSize="large"/>
                 </a>
-                <a href="https://github.com/07krW5Hnr5ghy">
-                    <img src={github} alt="github" loading='lazy'/>
+                <a href="https://github.com/07krW5Hnr5ghy" className="social-icons">
+                    <GitHub fontSize="large"/>
                 </a>
             </div>
         </div>

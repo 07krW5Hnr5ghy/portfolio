@@ -1,4 +1,5 @@
 @use '../base/functions' as f;
+@use '../base/breakpoints' as b;
 
 .main{
     display: flex;
@@ -9,7 +10,7 @@
 
 .section{
     border:1px solid black;
-    margin:f.rem(32) 0 0 0;
+    margin:f.rem(24) 0 f.rem(24) 0;
     padding:f.rem(24) f.rem(16) f.rem(24) f.rem(16);
 }
 
@@ -18,25 +19,66 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    @include b.breakpoint(medium){
+        flex-direction: row;
+        gap: f.rem(24);
+    }
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: f.rem(24) 0 f.rem(8) 0;
+    @include b.breakpoint(medium){
+        text-align: center;
+        align-items: center;
+    }
 }
 
 .photo{
     width: 50%;
-    border-radius: f.rem(16);
-    //margin:f.rem(24) 0 0 0;
+    @include b.breakpoint(medium){
+        width: 40%;
+    }
 }
 
 .about-me{
     text-align: left;
 }
 
+.download{
+    margin: f.rem(32) 0 f.rem(12) 0;
+    padding: f.rem(8) f.rem(20) f.rem(12) f.rem(20);
+    font-size: f.rem(24);
+    font-family: var(--title-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .technologies{
     display: flex;
     flex-direction: column;
     text-align: center;
+    @include b.breakpoint(medium){
+        text-align: left;
+        flex-direction: row;
+    }
+}
+
+.icons-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    margin:f.rem(12) f.rem(20) f.rem(12) f.rem(20);
 }
 
 .icon{
+    border: 1px solid black;
     height: f.rem(56);
     width: f.rem(56);
     margin: f.rem(16) f.rem(20) f.rem(16) f.rem(20);
@@ -44,9 +86,29 @@
 
 .projects{
     text-align: center;
+    @include b.breakpoint(medium){
+        text-align: right;
+    }
+}
+
+.projects-title{
+    font-size: f.rem(32);
 }
 
 .projects-container{
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    @include b.breakpoint(medium){
+        flex-direction: row;
+        flex-wrap: row;
+        justify-content: space-evenly;
+    }
+}
+
+.projects-link{
+    @include b.breakpoint(medium){
+        border: 1px solid black;
+        margin: f.rem(16) f.rem(16) f.rem(16) f.rem(16);
+    }
 }

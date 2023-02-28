@@ -11,11 +11,30 @@ const Detail = () => {
             <div className="detail-stack">
                 {slide.stack.map(tech => <span className="detail-tech">{tech}</span>)}
             </div>
-            <p></p>
+            <div className="detail-description">
+                <p className="">{slide.description}</p>
+            </div>
             <div className="detail-link">
-                {!slide.source ? null :  <a href={slide.source}>{`>> source code <<`}</a>}
-                {!slide.frontend ? null : <a href={slide.frontend}>{`>> source code frontend <<`}</a>}
-                {!slide.backend ? null : <a href={slide.backend}>{`>> source code backend <<`}</a>}
+                <button type="button" className="detail-deploy">
+                    <a target="_blank" href={slide.link}>Visit the project</a>
+                </button>
+            </div>
+            <div className="detail-source">
+                {!slide.source ? null :  
+                <a href={slide.source} 
+                className="source-link">
+                    {`source code`}
+                </a>}
+                {!slide.frontend ? null : 
+                <a href={slide.frontend} 
+                className="source-link">
+                    {`source code frontend`}
+                </a>}
+                {!slide.backend ? null : 
+                <a href={slide.backend} 
+                className="source-link">
+                    {`source code backend`}
+                </a>}
             </div>
         </div>
     );

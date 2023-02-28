@@ -38,8 +38,9 @@ const slides : Slide[] = [{
         "node mailer"
     ],
     link:'https://express-test-liard.vercel.app',
-    description:`Ecommerce where you can shop and sell clothes to all kind of public,
-    keep track of your sales`,
+    description:`clothes Ecommerce where you can upload products to sell,
+    keep record or your sales, and update your post of the clothes that you
+    want to sell.`,
     backend:'https://github.com/07krW5Hnr5ghy/PI-Pokemon-main',
     frontend:'https://github.com/Carsefer/PF-Clothes-Client',
 }];

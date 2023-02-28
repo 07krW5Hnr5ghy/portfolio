@@ -34,7 +34,78 @@
     border: 1px solid black;
 }
 
+.detail-description{
+    width: 80%;
+    border: 1px solid black;
+    margin: f.rem(24) 0 f.rem(4) 0;
+    padding: 0 0 0 f.rem(8);
+}
+
 .detail-link{
+    padding: f.rem(24) 0 f.rem(24) 0;
+}
+
+.detail-deploy{
+    padding: f.rem(8) f.rem(24) f.rem(8) f.rem(24);
+    font-size: f.rem(16);
+    font-family: var(--title-font);
+}
+
+.detail-source{
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    margin:f.rem(8) 0 f.rem(32) 0;
+    padding:f.rem(16) f.rem(16) f.rem(16) f.rem(16);
 }
+
+.source-link{
+    margin: f.rem(8) 0 f.rem(8) 0;
+    &::before,&::after{
+        opacity:0;
+        transition: opacity 0.2s ease,
+        transform 0.3s ease;
+        position:realtive;
+        //display: inline-block;
+    }
+
+    &::before{
+        content:"[";
+        transform: translateX(20px);
+        margin-right: .2em;
+    }
+
+    &::after{
+        content:"]";
+        transform: translateX(-20px);
+        margin-left:.2em;
+    }
+
+    &:hover{
+        color:black;
+        &::before,&::after{
+            opacity:1;
+            transform: translateX(0);
+        }
+    }
+
+    &.enclosing{
+        &::before{
+            transform:translateX(-20px);
+        }
+        &::after{
+            transform:translateX(20px);
+        }
+        &:hover{
+            &::before{
+                transform:translateX(0px);
+            }
+            &::after{
+                transform:translateX(0px);
+            }
+        }
+    }
+
+}
+
+

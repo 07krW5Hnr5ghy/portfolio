@@ -1,51 +1,105 @@
 @use '../base/functions' as f;
 @use '../base/breakpoints' as b;
-#Contact_container{
-    //background-color: red;
-    width:  min(100%,f.rem(1000));
-    height: min(30%,f.rem(800));
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items:flex-start;
-        justify-content: space-around;
-        input,textarea{
-            border-radius: f.rem(10);
-            border-color: var(--border-color);
-        }
-        input{
-            width:  min(100%,f.rem(500));
-            height: min(30%,f.rem(400));
-        }
-        label{
-            margin: f.rem(10);
-        }
-        textarea{
-            width:  min(100%,f.rem(500));
-            height: min(f.rem(100),f.rem(400));
-        }
-        input[type="submit"]{
-            margin: f.rem(30) 0;
-            padding: f.rem(10);
-        }
-    }
-    #Contact_social{
-        background-color: var(--fields-color);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+
+.contact-container{
+    //border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    font-size: f.rem(20);
+    @include b.breakpoint(medium){
         align-items: center;
-        width:  min(100%,f.rem(500));
-        height: min(f.rem(100),f.rem(400));
-        border-radius: f.rem(10);
-        img{
-            margin: f.rem(10);
-            height: f.rem(50);
-            width: f.rem(50);
-        }
-    }
-    .toast{
-        background-color: var(--panel-color);
-        color:var(--border-color);
     }
 }
+
+.contact-title{
+    font-size: f.rem(36);
+    @include b.breakpoint(medium){
+        width: 80%;
+        border: 1px solid black;
+    }
+}
+
+.contact-form{
+    //border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    @include b.breakpoint(medium){
+        width: 80%;
+    }
+}
+
+.contact-label{
+    margin:f.rem(12) 0 f.rem(12) 0;
+}
+
+.contact-input{
+    margin:f.rem(12) 0 f.rem(12) 0;
+    padding:f.rem(12) 0 f.rem(12) 0;
+    font-size: f.rem(16);
+}
+
+.contact-submit{
+    margin:f.rem(32) 0 f.rem(24) 0;
+    padding:  f.rem(12) 0 f.rem(12) 0;
+    font-size: f.rem(24);
+    font-weight: 600;
+    font-family: var(--title-font);
+}
+
+.social-container{
+    //border: 1px solid black;
+    margin:f.rem(8) 0 f.rem(8) 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+// #Contact_container{
+//     //background-color: red;
+//     width:  min(100%,f.rem(1000));
+//     height: min(30%,f.rem(800));
+//     form{
+//         display: flex;
+//         flex-direction: column;
+//         align-items:flex-start;
+//         justify-content: space-around;
+//         input,textarea{
+//             border-radius: f.rem(10);
+//             border-color: var(--border-color);
+//         }
+//         input{
+//             width:  min(100%,f.rem(500));
+//             height: min(30%,f.rem(400));
+//         }
+//         label{
+//             margin: f.rem(10);
+//         }
+//         textarea{
+//             width:  min(100%,f.rem(500));
+//             height: min(f.rem(100),f.rem(400));
+//         }
+//         input[type="submit"]{
+//             margin: f.rem(30) 0;
+//             padding: f.rem(10);
+//         }
+//     }
+//     #Contact_social{
+//         background-color: var(--fields-color);
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         width:  min(100%,f.rem(500));
+//         height: min(f.rem(100),f.rem(400));
+//         border-radius: f.rem(10);
+//         img{
+//             margin: f.rem(10);
+//             height: f.rem(50);
+//             width: f.rem(50);
+//         }
+//     }
+//     .toast{
+//         background-color: var(--panel-color);
+//         color:var(--border-color);
+//     }
+// }
