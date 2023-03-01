@@ -43,6 +43,9 @@
     @include b.breakpoint(medium){
         width: 40%;
     }
+    @include b.breakpoint(large){
+        width: 20%;
+    }
 }
 
 .about-me{
@@ -110,5 +113,10 @@
     @include b.breakpoint(medium){
         border: 1px solid black;
         margin: f.rem(16) f.rem(16) f.rem(16) f.rem(16);
+    }
+    @include b.breakpoint(large){
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
     }
 }

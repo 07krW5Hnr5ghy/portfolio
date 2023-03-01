@@ -46,15 +46,17 @@ const Contact = () => {
                 <textarea className="contact-input" ref={message} name="message" required onChange={(e) => {
                     message.current.value = e.target.value;
                 }}/>
-                <input className="contact-submit" type="submit" value="Send"/>
+                <div className="submit-container">
+                    <input className="contact-submit" type="submit" value="Send"/>
+                </div>
             </form>
             <ToastContainer/>
             <div className="social-container">
-                <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253" className="social-icons">
-                    <LinkedIn fontSize="large"/>
+                <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253">
+                    <LinkedIn fontSize='large'/>
                 </a>
-                <a href="https://github.com/07krW5Hnr5ghy" className="social-icons">
-                    <GitHub fontSize="large"/>
+                <a href="https://github.com/07krW5Hnr5ghy">
+                    <GitHub fontSize='large'/>
                 </a>
             </div>
         </div>

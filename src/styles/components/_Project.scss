@@ -5,8 +5,10 @@
     border: 1px solid black;
     margin: f.rem(16) 0 f.rem(16) 0;
     @include b.breakpoint(medium){
-        width: 100%;
         text-align: left;
+    }
+    @include b.breakpoint(large){
+        width: 80%;
     }
 }
 
