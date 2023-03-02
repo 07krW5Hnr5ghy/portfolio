@@ -13,10 +13,12 @@ import LogoSass from '../assets/sass.svg';
 import LogoRedux from '../assets/redux.svg';
 import {Link} from "react-router-dom";
 import {Download} from "@mui/icons-material";
+import Nav from "../components/Nav";
 
 const Home = () => {
     return(
       <div className="main">
+        <Nav/>
         <div className="about section">
           <header className="header">
             <img src={photo} alt="" className="photo"/>

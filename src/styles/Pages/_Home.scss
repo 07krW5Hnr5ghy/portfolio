@@ -4,13 +4,13 @@
 .main{
     display: flex;
     flex-direction: column;
-    margin: 0 20pt 0 20pt;
+    border: 1px solid black;
     font-family: var(--title-font);
 }
 
 .section{
     border:1px solid black;
-    margin:f.rem(24) 0 f.rem(24) 0;
+    margin:f.rem(24) 20pt f.rem(24) 20pt;
     padding:f.rem(24) f.rem(16) f.rem(24) f.rem(16);
 }
 
