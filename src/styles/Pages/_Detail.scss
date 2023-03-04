@@ -1,42 +1,75 @@
 @use '../base/functions' as f;
+@use '../base/breakpoints' as b;
 
 .detail-container{
-    border: 1px solid black;
-    margin:10pt 20pt 10pt 20pt;
+    border: 1px solid white;
+    background-color: var(--primary-tint3);
+    color:var(--primary-grayscale2);
+    margin:20pt 20pt 20pt 20pt;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: var(--title-font);
+    @include b.breakpoint(medium){
+        margin:f.rem(64) f.rem(64) f.rem(64) f.rem(64);
+    }
 }
 
 .detail-title{
     text-align: center;
+    font-size: 20pt;
 }
 
 .detail-image{
     width: 80%;
-    height: 20%;    
+    height: 20%;
+    @include b.breakpoint(medium){
+        width: 60%;
+        height: 20%;
+    }    
 }
 
 .detail-stack{
     display: flex;
-    //border:1px solid black;
-    margin:f.rem(8) 0 0 0;
+    border:1px solid white;
+    background-color: var(--secondary-tint1);
+    padding: f.rem(24) f.rem(4) f.rem(24) f.rem(24);
+    margin:f.rem(48) 0 0 0;
     width: 80%;
     height: 20%;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+.stack-open{
+    color:var(--primary-grayscale9);
+    font-size: 24pt;
 }
 
 .detail-tech{
     margin:f.rem(4) f.rem(12) f.rem(4) f.rem(8);
-    padding: 0 f.rem(8) f.rem(4) f.rem(12);
-    border: 1px solid black;
+    padding: f.rem(4) f.rem(8) f.rem(8) f.rem(12);
+    border-bottom: 2pt solid var(--primary-grayscale9);
+    color:var(--primary-grayscale9);
+    &::after{
+        content:" ,";
+    }
+}
+
+.last{
+    &::after{
+        content:"";
+    }
+}
+
+.stack-close{
+    color:var(--primary-grayscale9);
+    font-size: 24pt;
 }
 
 .detail-description{
     width: 80%;
-    border: 1px solid black;
     margin: f.rem(24) 0 f.rem(4) 0;
     padding: 0 0 0 f.rem(8);
 }
@@ -47,8 +80,14 @@
 
 .detail-deploy{
     padding: f.rem(8) f.rem(24) f.rem(8) f.rem(24);
-    font-size: f.rem(16);
+    font-size: f.rem(24);
     font-family: var(--title-font);
+    border:1pt solid var(--primary-grayscale9);
+    border-radius: f.rem(64);
+    background-color: var(--secondary-tint1);
+    a{
+        color:var(--primary-grayscale9);
+    }
 }
 
 .detail-source{
@@ -57,6 +96,9 @@
     border: 1px solid black;
     margin:f.rem(8) 0 f.rem(32) 0;
     padding:f.rem(16) f.rem(16) f.rem(16) f.rem(16);
+    a{
+        color: white;
+    }
 }
 
 .source-link{
@@ -65,8 +107,7 @@
         opacity:0;
         transition: opacity 0.2s ease,
         transform 0.3s ease;
-        position:realtive;
-        //display: inline-block;
+        position:relative;
     }
 
     &::before{

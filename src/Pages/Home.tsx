@@ -26,7 +26,7 @@ const Home = () => {
             <h2>Fullstack Web Developer</h2>
           </header>
           <article className="about-me">
-            <p>
+            <p className="description">
               Help-desk agent with 3 years and 9 months of work experience in Point of Sale systems support.
               <br/>
               <br/>
@@ -36,14 +36,14 @@ const Home = () => {
               Now, I am improving my technological skills, and learning new technologies to further my career and projects.
             </p>
             <button className="download">
-              Descargar CV <Download fontSize="large"/>
+              CV <Download fontSize="large"/>
             </button>
           </article>
         </div>
         <div className="technologies section">
           <h2 className="icons-title">Technologies</h2>
           <div className="icons-container">
-            <img src={Logohtml} alt="html" loading='lazy' className="icon"/> 
+            <img src={Logohtml} alt="html" loading='lazy' className="icon"/>
             <img src={Logocss} alt="css" loading='lazy' className="icon"/> 
             <img src={Logojs} alt="js" loading='lazy' className="icon"/>
             <img src={LogoNode} alt="node" loading='lazy' className="icon"/>

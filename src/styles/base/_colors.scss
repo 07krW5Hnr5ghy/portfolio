@@ -1,11 +1,41 @@
-// :root{
-//     --background-color:#020314;
-//     --title-color:#5932e6;
-//     --text-color:#8632e6;
-//     --fields-color:#b332e6;
-//     --border-color:#e032e6;
-//     --panel-color:#5932e6;
-// }
+:root{
+    /* monochrome */
+
+    --primary:hsl(239, 95%, 31%);
+    --primary-tint1:hsl(239, 95%, 41%);
+    --primary-tint2:hsl(239, 95%, 51%);
+    --primary-tint3:hsl(239, 95%, 61%);
+    --primary-tint4:hsl(239, 95%, 71%);
+    --primary-tint5:hsl(239, 95%, 81%);
+    --primary-shade1:hsl(239, 95%, 26%);
+    --primary-shade2:hsl(239, 95%, 21%);
+    --primary-shade3:hsl(239, 95%, 16%);
+    --primary-shade4:hsl(239, 95%, 11%);
+    --primary-shade5:hsl(239, 95%, 6%);
+    --primary-grayscale1:hsl(239, 20%, 10%);
+    --primary-grayscale2:hsl(239, 20%, 20%);
+    --primary-grayscale3:hsl(239, 20%, 30%);
+    --primary-grayscale4:hsl(239, 20%, 40%);
+    --primary-grayscale5:hsl(239, 20%, 50%);
+    --primary-grayscale6:hsl(239, 20%, 60%);
+    --primary-grayscale7:hsl(239, 20%, 70%);
+    --primary-grayscale8:hsl(239, 20%, 80%);
+    --primary-grayscale9:hsl(239, 20%, 90%);
+    --primary-grayscale10:hsl(239, 20%, 100%);
+
+    --secondary:hsl(239, 94%, 21%);
+    --secondary-tint1:hsl(239, 94%, 31%);
+    --secondary-tint2:hsl(239, 94%, 41%);
+    --secondary-tint3:hsl(239, 94%, 51%);
+    --secondary-tint4:hsl(239, 94%, 61%);
+    --secondary-tint5:hsl(239, 94%, 71%);
+    --secondary-shade1:hsl(239, 94%, 16%);
+    --secondary-shade2:hsl(239, 94%, 11%);
+    --secondary-shade3:hsl(239, 94%, 6%);
+    --secondary-shade4:hsl(239, 94%, 1%);
+    --secondary-shade5:hsl(239, 94%, 21%);
+
+}
 
 // .magenta{
 //     background-color: hsl(300, 95%, 33%);

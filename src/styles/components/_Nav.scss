@@ -2,20 +2,28 @@
 @use '../base/breakpoints' as b;
 
 .top-nav {
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color:black;
-    //background: linear-gradient(to left, #f46b45, #eea849);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #FFF;
-    height: 50px;
-    padding: 1em;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(3,4,104);
+  background: linear-gradient(90deg, rgba(3,4,104,1) 0%, rgba(62,65,249,1) 62%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: var(--primary-grayscale10);
+  height: f.rem(64);
+  padding: 1em;
+  border-bottom: 3pt solid var(--secondary-shade1);
+}
+
+.nav-home{
+  a{
+    color:var(--primary-grayscale10);
+    font-size: 16pt;
+  }
 }
   
 .menu {
@@ -49,7 +57,7 @@
 .menu-button::before,
 .menu-button::after {
     display: block;
-    background-color: #fff;
+    background-color: var(--primary-grayscale10);
     position: absolute;
     height: 4px;
     width: 30px;
@@ -81,14 +89,14 @@
     transform: rotate(-405deg);
 }
   
-@media (max-width: 700px) {
+@include b.breakpoint-down(medium) {
     .menu-button-container {
       display: flex;
     }
     .menu {
       position: absolute;
       top: 0;
-      margin-top: 50px;
+      margin-top: f.rem(64);
       left: 0;
       flex-direction: column;
       width: 100%;

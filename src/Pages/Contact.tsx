@@ -53,10 +53,16 @@ const Contact = () => {
             <ToastContainer/>
             <div className="social-container">
                 <a href="https://www.linkedin.com/in/juan-pablo-romero-poveda-477514253">
-                    <LinkedIn fontSize='large'/>
+                    <LinkedIn style={{
+                        fontSize:"40pt",
+                        color:"hsl(239, 20%, 100%)",
+                    }}/>
                 </a>
                 <a href="https://github.com/07krW5Hnr5ghy">
-                    <GitHub fontSize='large'/>
+                    <GitHub style={{
+                        fontSize:"40pt",
+                        color:"hsl(239, 20%, 100%)",
+                    }}/>
                 </a>
             </div>
         </div>

@@ -4,19 +4,22 @@ import {useParams} from "react-router-dom";
 const Detail = () => {
     const {id} = useParams();
     const slide = slides[Number(id)];
+    const last = slide.stack.length-1;
     return(
         <div className="detail-container">
             <h1 className="detail-title">{slide.title}</h1>
             <img src={slide.image} className="detail-image"/>
             <div className="detail-stack">
-                {slide.stack.map(tech => <span className="detail-tech">{tech}</span>)}
+                <span className="stack-open"> [</span>
+                {slide.stack.map((tech,index) => <span className={index !== last ? "detail-tech" : "detail-tech last" } key={index}>{tech}</span>)}
+                <span className="stack-close"> ]</span>
             </div>
             <div className="detail-description">
                 <p className="">{slide.description}</p>
             </div>
             <div className="detail-link">
                 <button type="button" className="detail-deploy">
-                    <a target="_blank" href={slide.link}>Visit the project</a>
+                    <a target="_blank" rel='noreferrer' href={slide.link}>Visit the project</a>
                 </button>
             </div>
             <div className="detail-source">
