@@ -150,6 +150,7 @@
         color:var(--secondary-tint2);
         border-right: 6pt solid var(--secondary-tint2);
         border-left: 6pt solid var(--secondary-tint2);
+        cursor: pointer;
         &::before,&::after{
             opacity:1;
             transform: translateX(0);
@@ -202,6 +203,7 @@
     color:var(--primary-tint4);
     background-color: var(--primary-grayscale9);
     border:2pt solid var(--primary-tint4);
+    cursor: pointer;
 }
 
 .back-button:active{

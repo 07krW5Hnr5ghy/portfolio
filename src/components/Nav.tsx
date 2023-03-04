@@ -6,7 +6,7 @@ const Nav = () => {
         <section className="top-nav">
             <div className="nav-home">
                 {!id ?
-                <a href=".about">Top</a> : 
+                <a href="#main">Top</a> : 
                 <Link to="/">Home</Link>}
             </div>
             <input id="menu-toggle" type="checkbox" />
@@ -14,11 +14,10 @@ const Nav = () => {
                 <div className='menu-button'></div>
             </label>
             <ul className="menu">
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li>
-                <li>Four</li>
-                <li>Five</li>
+                <li><a href="#link-about">about</a></li>
+                <li><a href="#link-tech">technologies</a></li>
+                <li><a href="#link-projects">projects</a></li>
+                <li><a href="#link-contact">contact</a></li>
             </ul>
         </section>
     )

@@ -17,9 +17,9 @@ import Nav from "../components/Nav";
 
 const Home = () => {
     return(
-      <div className="main">
+      <div className="main" id="main">
         <Nav/>
-        <div className="about section">
+        <div className="about section" id="link-about">
           <header className="header">
             <img src={photo} alt="" className="photo"/>
             <h1>Juan Pablo Romero</h1>
@@ -40,7 +40,7 @@ const Home = () => {
             </button>
           </article>
         </div>
-        <div className="technologies section">
+        <div className="technologies section" id="link-tech">
           <h2 className="icons-title">Technologies</h2>
           <div className="icons-container">
             <img src={Logohtml} alt="html" loading='lazy' className="icon"/>
@@ -54,7 +54,7 @@ const Home = () => {
             <img src={LogoRedux} alt="redux" loading='lazy' className="icon"/>
           </div>
         </div>
-        <div className="projects section">
+        <div className="projects section" id="link-projects">
           <h2 className="projects-title">Projects</h2>
           <div className="projects-container">
             {slides.map(slide => <Link className="projects-link" to={`/project/${slide.id}`}>
@@ -62,7 +62,7 @@ const Home = () => {
             </Link>)}
           </div>
         </div>
-        <div className="contact section">
+        <div className="contact section" id="link-contact">
           <Contact/>
         </div>
       </div>

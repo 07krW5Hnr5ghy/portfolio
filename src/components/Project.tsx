@@ -5,6 +5,7 @@ const Project = ({title,image,link,source,frontend,backend} : Slide) => {
         <div className="project-card">
             <img src={image} alt="" loading='lazy' className="project-picture"/>
             <h3>{title}</h3>
+            <div className="card-overlay"></div>
         </div>
     );
 };
