@@ -1,8 +1,13 @@
+import {Link,useParams} from "react-router-dom";
+
 const Nav = () => {
+    const {id} = useParams();
     return(
         <section className="top-nav">
             <div className="nav-home">
-                <a href=".about">Home</a>
+                {!id ?
+                <a href=".about">Top</a> : 
+                <Link to="/">Home</Link>}
             </div>
             <input id="menu-toggle" type="checkbox" />
             <label className='menu-button-container' htmlFor="menu-toggle">

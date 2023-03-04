@@ -75,6 +75,18 @@
     }
 }
 
+.contact-submit:hover{
+    background-color: var(--primary-grayscale9);
+    color:var(--primary-shade1);
+    border:3pt solid var(--primary-shade1);
+}
+
+.contact-submit:active{
+    background-color: var(--secondary-shade1);
+    color:var(--primary-tint5);
+    border:3pt solid var(--primary-tint5);
+}
+
 .social-container{
     margin:f.rem(8) 0 f.rem(8) 0;
     display: flex;

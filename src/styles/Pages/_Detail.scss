@@ -2,16 +2,16 @@
 @use '../base/breakpoints' as b;
 
 .detail-container{
-    border: 1px solid white;
+    border: 2pt solid var(--primary-grayscale9);
     background-color: var(--primary-tint3);
     color:var(--primary-grayscale2);
-    margin:20pt 20pt 20pt 20pt;
+    margin:70pt 20pt 20pt 20pt;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: var(--title-font);
     @include b.breakpoint(medium){
-        margin:f.rem(64) f.rem(64) f.rem(64) f.rem(64);
+        margin:f.rem(106) f.rem(64) f.rem(32) f.rem(64);
     }
 }
 
@@ -23,6 +23,7 @@
 .detail-image{
     width: 80%;
     height: 20%;
+    border:3pt solid var(--primary-tint5);
     @include b.breakpoint(medium){
         width: 60%;
         height: 20%;
@@ -82,7 +83,7 @@
     padding: f.rem(8) f.rem(24) f.rem(8) f.rem(24);
     font-size: f.rem(24);
     font-family: var(--title-font);
-    border:1pt solid var(--primary-grayscale9);
+    border:2pt solid var(--primary-grayscale9);
     border-radius: f.rem(64);
     background-color: var(--secondary-tint1);
     a{
@@ -90,44 +91,76 @@
     }
 }
 
+.detail-deploy:hover{
+    background-color: var(--primary-grayscale9);
+    border:2pt solid var(--primary-shade1);
+    a{
+        color:var(--primary-shade1);
+    }
+}
+
+.detail-deploy:active{
+    background-color: var(--secondary-shade1);
+    border:2pt solid var(--primary-tint5);
+    a{
+        color:var(--primary-tint5);
+    }
+}
+
 .detail-source{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     margin:f.rem(8) 0 f.rem(32) 0;
     padding:f.rem(16) f.rem(16) f.rem(16) f.rem(16);
     a{
-        color: white;
+        color: var(--primary-grayscale9);
     }
 }
 
 .source-link{
     margin: f.rem(8) 0 f.rem(8) 0;
+    font-size: 16pt;
+    background-color: var(--secondary-tint1);
+    color:var(--primary-grayscale9);
+    border-radius: f.rem(64);
+    padding: f.rem(8) f.rem(16) f.rem(8) f.rem(16);
     &::before,&::after{
-        opacity:0;
         transition: opacity 0.2s ease,
         transform 0.3s ease;
         position:relative;
+        @include b.breakpoint(large){
+            opacity:0;
+        }
     }
 
     &::before{
-        content:"[";
+        content:"<<";
         transform: translateX(20px);
         margin-right: .2em;
     }
 
     &::after{
-        content:"]";
+        content:">>";
         transform: translateX(-20px);
         margin-left:.2em;
     }
 
     &:hover{
-        color:black;
+        background-color:var(--primary-tint5);
+        color:var(--secondary-tint2);
+        border-right: 6pt solid var(--secondary-tint2);
+        border-left: 6pt solid var(--secondary-tint2);
         &::before,&::after{
             opacity:1;
             transform: translateX(0);
         }
+    }
+
+    &:active{
+        background-color: var(--secondary-tint3);
+        color:var(--primary-tint5);
+        border-right: 6pt solid var(--primary-tint5);
+        border-left: 6pt solid var(--primary-tint5);
     }
 
     &.enclosing{
@@ -149,4 +182,30 @@
 
 }
 
+.back-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:f.rem(24) 0 f.rem(64) 0;
+}
 
+.back-button{
+    font-size: 18pt;
+    background-color: var(--primary-tint4);
+    color:var(--primary-grayscale9);
+    border:2pt solid var(--primary-grayscale9);
+    padding: f.rem(8) f.rem(32) f.rem(8) f.rem(32);
+}
+
+.back-button:hover{
+    color:var(--primary-tint4);
+    background-color: var(--primary-grayscale9);
+    border:2pt solid var(--primary-tint4);
+}
+
+.back-button:active{
+    background-color: var(--primary-tint2);
+    color:var(--primary-grayscale9);
+    border:2pt solid var(--primary-grayscale9);
+}

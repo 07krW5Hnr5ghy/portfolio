@@ -90,6 +90,18 @@
     }
 }
 
+.download:hover{
+    background-color: var(--primary-grayscale9);
+    color:var(--primary-shade1);
+    border:3pt solid var(--primary-shade1);
+}
+
+.download:active{
+    background-color: var(--secondary-shade1);
+    color:var(--primary-tint5);
+    border:3pt solid var(--primary-tint5);
+}
+
 .technologies{
     display: flex;
     flex-direction: column;
@@ -109,7 +121,6 @@
 }
 
 .icons-container{
-    //border:1px solid white;
     border-radius: f.rem(8);
     background-color: var(--secondary-shade5);
     display: flex;
@@ -118,9 +129,6 @@
     justify-content: space-around;
     margin:f.rem(12) f.rem(20) f.rem(12) f.rem(20);
     padding: f.rem(16) 0 f.rem(16) 0;
-    @include b.breakpoint(medium){
-        
-    }
 }
 
 .icon{
