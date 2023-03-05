@@ -11,11 +11,25 @@ import LogoExpress from '../assets/express.svg';
 import LogoPostgres from '../assets/postgresql.svg';
 import LogoSass from '../assets/sass.svg';
 import LogoRedux from '../assets/redux.svg';
+import LogoTypescript from "../assets/typescript.svg";
 import {Link} from "react-router-dom";
 import {Download} from "@mui/icons-material";
 import Nav from "../components/Nav";
 
+
+
 const Home = () => {
+    const downloadCV = () => {
+      fetch('cv.pdf').then(response => {
+        response.blob().then(blob => {
+          const fileURL = window.URL.createObjectURL(blob);
+          let aLink = document.createElement('a');
+          aLink.href = fileURL;
+          aLink.download = 'cv.pdf';
+          aLink.click();
+        })
+      })
+    }
     return(
       <div className="main" id="main">
         <Nav/>
@@ -35,7 +49,7 @@ const Home = () => {
               <br/>
               Now, I am improving my technological skills, and learning new technologies to further my career and projects.
             </p>
-            <button className="download">
+            <button className="download" onClick={downloadCV}>
               CV <Download fontSize="large"/>
             </button>
           </article>
@@ -52,13 +66,14 @@ const Home = () => {
             <img src={LogoPostgres} alt="postgress" loading='lazy' className="icon"/>
             <img src={LogoSass} alt="sass" loading='lazy' className="icon"/>
             <img src={LogoRedux} alt="redux" loading='lazy' className="icon"/>
+            <img src={LogoTypescript} alt="typescript" loading="lazy" className="icon"/>
           </div>
         </div>
         <div className="projects section" id="link-projects">
           <h2 className="projects-title">Projects</h2>
           <div className="projects-container">
-            {slides.map(slide => <Link className="projects-link" to={`/project/${slide.id}`}>
-              <Project {...slide}/>
+            {slides.map((slide,index) => <Link className="projects-link" to={`/project/${slide.id}`}>
+              <Project {...slide} key={index}/>
             </Link>)}
           </div>
         </div>

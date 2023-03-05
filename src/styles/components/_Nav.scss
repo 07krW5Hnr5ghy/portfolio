@@ -92,6 +92,11 @@
     margin-top: 0px;
     transform: rotate(-405deg);
 }
+
+.menu > li:hover{
+  padding: f.rem(0) 0 f.rem(8) 0;
+  border-bottom: 2pt solid var(--primary-grayscale10);
+}
   
 @include b.breakpoint-down(medium) {
     .menu-button-container {
@@ -129,6 +134,7 @@
       color: var(--primary-grayscale10);
       background-color: var(--primary-shade1);
     }
+
     .menu > li:not(:last-child) {
       border-bottom: 2pt solid var(--secondary-shade1);
     }

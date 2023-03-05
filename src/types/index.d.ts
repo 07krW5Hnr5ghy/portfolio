@@ -10,3 +10,7 @@ declare module "*.svg"{
     const path:string;
     export default path;
 };
+declare module "*.pdf"{
+    const path:string;
+    export default path;
+}
