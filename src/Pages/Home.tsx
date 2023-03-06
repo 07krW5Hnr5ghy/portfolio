@@ -19,6 +19,7 @@ import Nav from "../components/Nav";
 
 
 const Home = () => {
+  
     const downloadCV = () => {
       fetch('cv.pdf').then(response => {
         response.blob().then(blob => {
@@ -30,6 +31,7 @@ const Home = () => {
         })
       })
     }
+
     return(
       <div className="main" id="main">
         <Nav/>
