@@ -3,7 +3,8 @@ export interface Slide{
     title:string;
     image:string;
     stack:string[];
-    description:string;
+    description_en:string;
+    description_es:string;
     link:string;
     source?:string;
     frontend?:string;

@@ -2,21 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {Link,useParams} from "react-router-dom";
 import i18next from "i18next";
-
-const languages = [
-    {
-        code: 'sp',
-        name: 'Español',
-        country_code: 'co'
-    },
-    {
-        code: 'en',
-        name: 'English',
-        country_code: 'us'
-    }
-];
-
-
+import {Home} from "@mui/icons-material";
 
 const Nav = () => {
     const {id} = useParams();
@@ -32,17 +18,17 @@ const Nav = () => {
             <div className="nav-home">
                 {!id ?
                 <a className="home-link" href="#main">{t('navbar_header')}</a> : 
-                <Link className="home-link" to="/">Home</Link>}
+                <Link className="home-link" to="/"><Home fontSize="large"/></Link>}
             </div>
             <input id="menu-toggle" type="checkbox" />
             <label className='menu-button-container' htmlFor="menu-toggle">
                 <div className='menu-button'></div>
             </label>
             <ul className="menu">
-                <li className="menu-link"><a href="#link-about">about</a></li>
-                <li className="menu-link"><a href="#link-tech">technologies</a></li>
-                <li className="menu-link"><a href="#link-projects">projects</a></li>
-                <li className="menu-link"><a href="#link-contact">contact</a></li>
+                <li className="menu-link"><a href="#link-about">{t('about_link')}</a></li>
+                <li className="menu-link"><a href="#link-tech">{t('technologies_link')}</a></li>
+                <li className="menu-link"><a href="#link-projects">{t('projects_link')}</a></li>
+                <li className="menu-link"><a href="#link-contact">{t('contact_link')}</a></li>
                 <li className="switch-container">
                     <label className="switch">
                         <input type="checkbox" className="lang" onChange={() => handleLang(!lang)}/>

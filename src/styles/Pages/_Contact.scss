@@ -38,12 +38,15 @@
 
 .contact-input{
     margin:f.rem(12) 0 f.rem(12) 0;
-    padding:f.rem(12) 0 f.rem(12) 0;
+    padding:f.rem(12) f.rem(0) f.rem(12) f.rem(12);
     font-size: f.rem(16);
     font-family: var(--title-font);
     background-color: var(--primary-tint2);
     color:var(--primary-grayscale10);
     border:2pt solid var(--primary-grayscale10);
+    &:focus{
+        border: none;
+    }
     @include b.breakpoint(medium){
         font-size: 16pt;
     }
@@ -102,7 +105,10 @@
     }
 }
 
+
 .social-icons{
-    font-size: 40pt;
     color:var(--primary-grayscale10);
+    &:hover{
+        color:var(--secondary-tint1);
+    }
 }

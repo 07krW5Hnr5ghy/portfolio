@@ -16,10 +16,14 @@ const slides : Slide[] = [{
         "redux",
         "redux-persist"
     ],
-    description:`Single Page Aplication that 
-    contains a collection of pokemon where you 
-    could see the stats of each one, create your own pokemons
-    and modify and delete them`,
+    description_en:`Single Page Application that 
+    contains a collection of pokemons where you 
+    could see the stats of each one, create your own pokemons,
+    modify and delete them`,
+    description_es:`Single Page Application que contiene
+    una colección de pokemons donde tu puedes ver la data de cada uno,
+    crear tus propios pokemons modificarlos y borrarlos
+`,
     link:'https://pi-pokemon-main-client-a1yl.vercel.app',
     source:'https://github.com/07krW5Hnr5ghy/PI-Pokemon-main',
 },{
@@ -38,9 +42,12 @@ const slides : Slide[] = [{
         "node mailer"
     ],
     link:'https://express-test-liard.vercel.app',
-    description:`Clothes Ecommerce where you can upload products to sell,
+    description_en:`Clothes Ecommerce where you can upload products to sell,
     keep record or your sales, and update your post of the clothes that you
     want to sell.`,
+    description_es:`Ecommerce de ropa donde puedes subir productos para vender,
+    llevar un registro de sus ventas, y actualizar tu publicacion de ropa que
+    quieres vender.`,
     backend:'https://github.com/LucasMacchi/PF-Clothes-Backend',
     frontend:'https://github.com/Carsefer/PF-Clothes-Client',
 }];

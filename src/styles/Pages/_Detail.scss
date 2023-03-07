@@ -5,13 +5,13 @@
     border: 2pt solid var(--primary-grayscale9);
     background-color: var(--primary-tint3);
     color:var(--primary-grayscale2);
-    margin:70pt 20pt 20pt 20pt;
+    margin:90pt 20pt 20pt 20pt;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: var(--title-font);
     @include b.breakpoint(medium){
-        margin:f.rem(106) f.rem(64) f.rem(32) f.rem(64);
+        margin:f.rem(124) f.rem(64) f.rem(32) f.rem(64);
     }
 }
 

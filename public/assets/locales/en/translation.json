@@ -1,4 +1,21 @@
 {
     "navbar_header":"Top",
-    "language":"language"
+    "about_link":"about",
+    "technologies_link":"technologies",
+    "projects_link":"projects",
+    "contact_link":"contact",
+    "headline":"Fullstack Web Developer",
+    "description_1":"Help-desk agent with 3 years of experience in Point of Sale systems support.",
+    "description_2":"graduate of Henry's 700-hour coding bootcamp on the PERN (Postgres,Express,React and Node) Stack",
+    "description_3":"Starting out in the IT world and constantly learning new skills and technologies.",
+    "technologies":"Technologies",
+    "projects":"Projects",
+    "contact":"Contact me",
+    "name":"Name",
+    "message":"Message",
+    "send":"Send",
+    "deploy":"Visit the project",
+    "source":"source code",
+    "fronted":"source code frontend",
+    "backend":"source code backend"
 }

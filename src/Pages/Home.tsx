@@ -14,12 +14,13 @@ import LogoRedux from '../assets/redux.svg';
 import LogoTypescript from "../assets/typescript.svg";
 import {Link} from "react-router-dom";
 import {Download} from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import Nav from "../components/Nav";
 
 
 
 const Home = () => {
-  
+    const {t} = useTranslation();
     const downloadCV = () => {
       fetch('cv.pdf').then(response => {
         response.blob().then(blob => {
@@ -39,17 +40,17 @@ const Home = () => {
           <header className="header">
             <img src={photo} alt="" className="photo"/>
             <h1>Juan Pablo Romero</h1>
-            <h2>Fullstack Web Developer</h2>
+            <h2>{t('headline')}</h2>
           </header>
           <article className="about-me">
             <p className="description">
-              Help-desk agent with 3 years and 9 months of work experience in Point of Sale systems support.
+              {t('description_1')}
               <br/>
               <br/>
-              I am interested in the technologies currently used on the internet, and their inner workings.
+              {t('description_2')}
               <br/>
               <br/>
-              Now, I am improving my technological skills, and learning new technologies to further my career and projects.
+              {t('description_3')}
             </p>
             <button className="download" onClick={downloadCV}>
               CV <Download fontSize="large"/>
@@ -57,7 +58,7 @@ const Home = () => {
           </article>
         </div>
         <div className="technologies section" id="link-tech">
-          <h2 className="icons-title">Technologies</h2>
+          <h2 className="icons-title">{t('technologies')}</h2>
           <div className="icons-container">
             <img src={Logohtml} alt="html" loading='lazy' className="icon"/>
             <img src={Logocss} alt="css" loading='lazy' className="icon"/> 
@@ -72,7 +73,7 @@ const Home = () => {
           </div>
         </div>
         <div className="projects section" id="link-projects">
-          <h2 className="projects-title">Projects</h2>
+          <h2 className="projects-title">{t('projects')}</h2>
           <div className="projects-container">
             {slides.map((slide,index) => <Link className="projects-link" to={`/project/${slide.id}`}>
               <Project {...slide} key={index}/>

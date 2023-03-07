@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: f.rem(88) 20pt f.rem(24) 20pt;
+    margin: f.rem(112) 20pt f.rem(24) 20pt;
     @include b.breakpoint(medium){
         flex-direction: row;
         gap: f.rem(12);
