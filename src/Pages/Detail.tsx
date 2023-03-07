@@ -14,14 +14,14 @@ const Detail = () => {
             <Nav/>
             <div className="detail-container">
                 <h1 className="detail-title">{slide.title}</h1>
-                <img src={slide.image} className="detail-image"/>
+                <img src={slide.image} className="detail-image" alt=""/>
                 <div className="detail-stack">
                     <span className="stack-open"> [</span>
                     {slide.stack.map((tech,index) => <span className={index !== last ? "detail-tech" : "detail-tech last" } key={index}>{tech}</span>)}
                     <span className="stack-close"> ]</span>
                 </div>
                 <div className="detail-description">
-                    <p className="">{lang == "en" ? slide.description_en : slide.description_es}</p>
+                    <p className="">{lang === "en" ? slide.description_en : slide.description_es}</p>
                 </div>
                 <div className="detail-link">
                     <button type="button" className="detail-deploy">
