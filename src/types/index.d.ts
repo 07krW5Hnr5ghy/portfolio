@@ -1,3 +1,4 @@
+// types for import images and pdf file in react
 declare module "*.jpg"{
     const path:string;
     export default path;

@@ -5,11 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import './styles/styles.scss';
 import {BrowserRouter} from "react-router-dom";
 
+/* lenguage config imports */
 import { initReactI18next } from "react-i18next";
 import i18next from "i18next";
 import LanguageDetector  from "i18next-browser-languagedetector";
 import HttpApi from 'i18next-http-backend';
 
+/* lenguage support config */
 i18next
 .use(initReactI18next)
 .use(LanguageDetector)

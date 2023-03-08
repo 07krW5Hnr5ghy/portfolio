@@ -21,6 +21,7 @@ import Nav from "../components/Nav";
 
 const Home = () => {
     const {t} = useTranslation();
+    /* donwload pdf with resume */
     const downloadCV = () => {
       fetch('cv.pdf').then(response => {
         response.blob().then(blob => {
@@ -37,11 +38,13 @@ const Home = () => {
       <div className="main" id="main">
         <Nav/>
         <div className="about section" id="link-about">
+          {/* photo and headline */}
           <header className="header">
             <img src={photo} alt="" className="photo"/>
             <h1>Juan Pablo Romero</h1>
             <h2>{t('headline')}</h2>
           </header>
+          {/* about me description */}
           <article className="about-me">
             <p className="description">
               {t('description_1')}
@@ -52,11 +55,13 @@ const Home = () => {
               <br/>
               {t('description_3')}
             </p>
+            {/* button for download resume */}
             <button className="download" onClick={downloadCV}>
               CV <Download fontSize="large"/>
             </button>
           </article>
         </div>
+        {/* skills section */}
         <div className="technologies section" id="link-tech">
           <h2 className="icons-title">{t('technologies')}</h2>
           <div className="icons-container">
@@ -72,6 +77,7 @@ const Home = () => {
             <img src={LogoTypescript} alt="typescript" loading="lazy" className="icon"/>
           </div>
         </div>
+        {/* projects section */}
         <div className="projects section" id="link-projects">
           <h2 className="projects-title">{t('projects')}</h2>
           <div className="projects-container">
@@ -80,6 +86,7 @@ const Home = () => {
             </Link>)}
           </div>
         </div>
+        {/* contact section */}
         <div className="contact section" id="link-contact">
           <Contact/>
         </div>

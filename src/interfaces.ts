@@ -1,3 +1,4 @@
+/* interface for slide containing project */
 export interface Slide{
     id:number,
     title:string;

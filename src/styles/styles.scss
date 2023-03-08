@@ -1,12 +1,8 @@
 // ui settings
 @forward './base';
-@forward './layout';
 // views
-@use './Pages/About';
 @use './Pages/Contact';
 @use './Pages/Home';
-@use './Pages/Projects';
-@use './Pages/Skills';
 @use './Pages/Detail';
 // components
 @use './components/Project';

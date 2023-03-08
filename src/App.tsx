@@ -3,6 +3,7 @@ import Detail from "./Pages/Detail";
 import {Route,Routes} from "react-router-dom";
 
 function App() {
+  /* frontend routing */
   return (
     <Routes>
             <Route path="/" element={<Home/>}/>

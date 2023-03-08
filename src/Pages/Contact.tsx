@@ -6,16 +6,21 @@ import { LinkedIn,GitHub } from '@mui/icons-material';
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+
     const {t} = useTranslation();
+
+    /* enviroment variables for e-mail service */
     const serviceId : string = process.env.REACT_APP_SERVICE_ID!;
     const templateId : string = process.env.REACT_APP_TEMPLATE_ID!;
     const apiKey : string = process.env.REACT_APP_API_KEY!;
     
+    /* refs to mail info */
     const form = useRef<HTMLFormElement>(null!);
     const name = useRef<HTMLInputElement>(null!);
     const email = useRef<HTMLInputElement>(null!);
     const message = useRef<HTMLTextAreaElement>(null!);
    
+    /* send email event */
     const sendEmail  = (e : React.FormEvent)  => {
         e.preventDefault();
         emailjs.sendForm(serviceId,templateId,form.current,apiKey)

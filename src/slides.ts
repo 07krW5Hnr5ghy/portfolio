@@ -1,5 +1,6 @@
 import {Slide} from "./interfaces";
 
+/* data about projects */
 const slides : Slide[] = [{
     id:0,
     title:'Pokemon SPA',

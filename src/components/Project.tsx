@@ -1,6 +1,7 @@
 import {Slide} from '../interfaces';
 
-const Project = ({title,image,link,source,frontend,backend} : Slide) => {
+/* card showing the projects */
+const Project = ({title,image} : Slide) => {
     return(
         <div className="project-card">
             <img src={image} alt="" loading='lazy' className="project-picture"/>
