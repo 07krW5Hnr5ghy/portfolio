@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function App() {
   /* frontend routing */
-  const [eng, setEng] = useState<boolean>(false);
+  const [eng, setEng] = useState<boolean>(true);
   return (
     <Routes>
       <Route path="/" element={<Home eng={eng} setEng={setEng} />} />
