@@ -12,7 +12,7 @@ export interface Slide {
     backend?: string;
 }
 
-export interface NavProps {
-    eng: string;
+export interface EngProps {
+    eng: boolean;
     setEng: React.Dispatch<React.SetStateAction<boolean>>;
 }
