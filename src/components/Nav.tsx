@@ -1,30 +1,32 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {Link,useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import i18next from "i18next";
-import {Home} from "@mui/icons-material";
+import { Home } from "@mui/icons-material";
+import { EngProps } from "../interfaces";
 
-const Nav = () => {
-    const {id} = useParams();
-    const {t} = useTranslation();
+const Nav = ({ eng, setEng }: EngProps) => {
+    const { id } = useParams();
+    const { t } = useTranslation();
 
-    const [lang,setLang] = useState<boolean>(true);
+    const [lang, setLang] = useState<boolean>(true);
 
     /* switch website language using lang state */
-    const handleLang = (value:boolean) => {
+    const handleLang = (value: boolean) => {
         setLang(value);
-        if(value === true) i18next.changeLanguage('en');
-        if(value === false) i18next.changeLanguage('sp'); 
+        setEng(value);
+        if (value === true) i18next.changeLanguage('en');
+        if (value === false) i18next.changeLanguage('sp');
     }
 
-    return(
+    return (
         <section className="top-nav">
             <div className="nav-home">
                 {/* change main navbar link according 
                 with the section of the site */}
                 {!id ?
-                <a className="home-link" href="#main">{t('navbar_header')}</a> : 
-                <Link className="home-link" to="/"><Home fontSize="large"/></Link>}
+                    <a className="home-link" href="#main">{t('navbar_header')}</a> :
+                    <Link className="home-link" to="/"><Home fontSize="large" /></Link>}
             </div>
             <input id="menu-toggle" type="checkbox" />
             <label className='menu-button-container' htmlFor="menu-toggle">
@@ -38,7 +40,7 @@ const Nav = () => {
                 {/* language switch */}
                 <li className="switch-container">
                     <label className="switch">
-                        <input type="checkbox" className="lang" onChange={() => handleLang(!lang)}/>
+                        <input type="checkbox" className="lang" onChange={() => handleLang(!lang)} />
                         <span className="slider round"></span>
                     </label>
                     <span className="lang-show">{!lang ? "ES" : "EN"}</span>
