@@ -25,7 +25,7 @@ const Home = ({ eng, setEng }: EngProps) => {
 
   /* donwload pdf with resume */
   const downloadCV = () => {
-    fetch(eng ? 'CV Juan Pablo Romero - FullStack english.pdf' : 'CV Juan Pablo Romero - FullStack.pdf').then(response => {
+    fetch(eng ? 'Juan_Pablo_Romero_Poveda_CV_EN.pdf' : 'Juan_Pablo_Romero_Poveda_CV.pdf').then(response => {
       response.blob().then(blob => {
         const fileURL = window.URL.createObjectURL(blob);
         let aLink = document.createElement('a');
