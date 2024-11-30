@@ -12,6 +12,8 @@ import LogoPostgres from '../assets/postgresql.svg';
 import LogoSass from '../assets/sass.svg';
 import LogoRedux from '../assets/redux.svg';
 import LogoTypescript from "../assets/typescript.svg";
+import LogoJava from "../assets/java.svg";
+import LogoSpringBoot from "../assets/spring.svg";
 import { Link } from "react-router-dom";
 import { Download } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
@@ -77,6 +79,8 @@ const Home = ({ eng, setEng }: EngProps) => {
           <img src={LogoSass} alt="sass" loading='lazy' className="icon" />
           <img src={LogoRedux} alt="redux" loading='lazy' className="icon" />
           <img src={LogoTypescript} alt="typescript" loading="lazy" className="icon" />
+          <img src={LogoJava} alt="java" loading="lazy" className="icon" />
+          <img src={LogoSpringBoot} alt="spring boot" loading="lazy" className="icon" />
         </div>
       </div>
       {/* projects section */}
