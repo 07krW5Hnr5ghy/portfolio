@@ -51,6 +51,22 @@ const slides : Slide[] = [{
     quieres vender.`,
     backend:'https://github.com/LucasMacchi/PF-Clothes-Backend',
     frontend:'https://github.com/Carsefer/PF-Clothes-Client',
+},
+{
+    id:2,
+    title:'Age calculator',
+    image:require('../src/assets/project03.png'),
+    stack:[
+        "html",
+        "css",
+        "javascript"
+    ],
+    link:'https://07krw5hnr5ghy.github.io/age-calculator/',
+    description_en:`App that calculate the age of the user when the birthdate is 
+    inserted in the input using a javascript calendar date selector.`,
+    description_es:`App que calcula la edad del usuario al momento de insertar la
+    fecha de nacimiento en el formulario usando un calendario para seleccionar la fecha.`,
+    source:'https://github.com/07krW5Hnr5ghy/age-calculator',
 }];
 
 export default slides;
