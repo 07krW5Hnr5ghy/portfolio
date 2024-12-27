@@ -67,6 +67,20 @@ const slides : Slide[] = [{
     description_es:`App que calcula la edad del usuario al momento de insertar la
     fecha de nacimiento en el formulario usando un calendario para seleccionar la fecha.`,
     source:'https://github.com/07krW5Hnr5ghy/age-calculator',
+},
+{
+    id:3,
+    title:'Reddit Client',
+    image:require('../src/assets/project04.png'),
+    stack:[
+        "html",
+        "css",
+        "javascript"
+    ],
+    link:'https://07krw5hnr5ghy.github.io/reddit-client/',
+    description_en:`Reddit client that allow to visualize post titles feed of three sub reddits at the same time`,
+    description_es:`Cliente de reddit que permite visualizar hasta 3 feeds de titulos de posts de diferentes sub reddits al mismo tiempo`,
+    source:'https://github.com/07krW5Hnr5ghy/reddit-client',
 }];
 
 export default slides;
