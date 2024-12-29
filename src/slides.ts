@@ -56,7 +56,7 @@ const slides : Slide[] = [
     una colección de pokemons donde tu puedes ver la data de cada uno,
     crear tus propios pokemons modificarlos y borrarlos
 `,
-    link:'https://pi-pokemon-main-client-a1yl.vercel.app',
+    link:'https://pok-client.netlify.app',
     source:'https://github.com/07krW5Hnr5ghy/PI-Pokemon-main',
 },{
     id:3,
