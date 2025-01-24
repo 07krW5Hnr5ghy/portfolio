@@ -4,8 +4,47 @@ import {Slide} from "./interfaces";
 const slides : Slide[] = [
     {
         id:0,
+        title:'Expense Tracker',
+        image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737761379/portfolio/Screenshot_2025-01-24_182754_rimjc9.png'),
+        stack:[
+            "html",
+            "react",
+            "javascript",
+            "node.js",
+            "tailwind css",
+            "mongodb",
+            "express.js",
+            "jwt"
+        ],
+        description_en:`Expense tracker that 
+        allows to create, update, delete, list and filter your expenses 
+        to keep record of your expenses`,
+        description_es:`Aplicativo de control de gastos
+        que permite registrar, actualizar, borrar, listar y filtrar tus gastos,
+        para hacer seguimiento de tus gastos
+    `,
+        link:'https://expense-tracker-frontend-taupe.vercel.app',
+        backend:'https://github.com/07krW5Hnr5ghy/expense-tracker-api',
+        frontend:'https://github.com/07krW5Hnr5ghy/expense-tracker-frontend',
+    },
+    {
+        id:1,
+        title:'Reddit Client',
+        image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737759663/portfolio/project04_zblksv.png'),
+        stack:[
+            "html",
+            "css",
+            "javascript"
+        ],
+        link:'https://07krw5hnr5ghy.github.io/reddit-client/',
+        description_en:`Reddit client that allow to visualize post titles feed of three sub reddits at the same time`,
+        description_es:`Cliente de reddit que permite visualizar hasta 3 feeds de titulos de posts de diferentes sub reddits al mismo tiempo`,
+        source:'https://github.com/07krW5Hnr5ghy/reddit-client',
+    },
+    {
+        id:2,
         title:'Age calculator',
-        image:require('../src/assets/project03.png'),
+        image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737759387/portfolio/project03_qhgrwo.png'),
         stack:[
             "html",
             "css",
@@ -19,49 +58,9 @@ const slides : Slide[] = [
         source:'https://github.com/07krW5Hnr5ghy/age-calculator',
     },
     {
-        id:1,
-        title:'Reddit Client',
-        image:require('../src/assets/project04.png'),
-        stack:[
-            "html",
-            "css",
-            "javascript"
-        ],
-        link:'https://07krw5hnr5ghy.github.io/reddit-client/',
-        description_en:`Reddit client that allow to visualize post titles feed of three sub reddits at the same time`,
-        description_es:`Cliente de reddit que permite visualizar hasta 3 feeds de titulos de posts de diferentes sub reddits al mismo tiempo`,
-        source:'https://github.com/07krW5Hnr5ghy/reddit-client',
-    },
-    {
-    id:2,
-    title:'Pokemon SPA',
-    image:require('../src/assets/project01.png'),
-    stack:[
-        "html",
-        "sass",
-        "react",
-        "javascript",
-        "node.js",
-        "typescript",
-        "firebase",
-        "postgres",
-        "redux",
-        "redux-persist"
-    ],
-    description_en:`Single Page Application that 
-    contains a collection of pokemons where you 
-    could see the stats of each one, create your own pokemons,
-    modify and delete them`,
-    description_es:`Single Page Application que contiene
-    una colección de pokemons donde tu puedes ver la data de cada uno,
-    crear tus propios pokemons modificarlos y borrarlos
-`,
-    link:'https://pok-client.netlify.app',
-    source:'https://github.com/07krW5Hnr5ghy/PI-Pokemon-main',
-},{
     id:3,
     title:'E-Commerce Express Clothes',
-    image:require('../src/assets/project02.png'),
+    image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737757990/portfolio/project02_i4moc2.png'),
     stack:[
         "html",
         "css",

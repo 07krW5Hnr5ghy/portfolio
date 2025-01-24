@@ -1,7 +1,6 @@
 import slides from '../slides';
 import Project from '../components/Project';
 import Contact from './Contact';
-import photo from '../assets/profile.png';
 import Logohtml from '../assets/html-5.svg';
 import Logocss from '../assets/css-3.svg';
 import Logojs from '../assets/logo-javascript.svg';
@@ -44,7 +43,7 @@ const Home = ({ eng, setEng }: EngProps) => {
       <div className="about section" id="link-about">
         {/* photo and headline */}
         <header className="header">
-          <img src={photo} alt="" className="photo" />
+          <img src={'https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737757507/portfolio/profile_xte9qn.png'} alt="" className="photo" />
           <h1>Juan Pablo Romero</h1>
           <h2>{t('headline')}</h2>
         </header>
