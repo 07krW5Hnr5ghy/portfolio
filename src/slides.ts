@@ -5,7 +5,7 @@ const slides : Slide[] = [
     {
         id:0,
         title:'Expense Tracker',
-        image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737761379/portfolio/Screenshot_2025-01-24_182754_rimjc9.png'),
+        image:'https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737761379/portfolio/Screenshot_2025-01-24_182754_rimjc9.png',
         stack:[
             "html",
             "react",
@@ -30,7 +30,7 @@ const slides : Slide[] = [
     {
         id:1,
         title:'Reddit Client',
-        image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737759663/portfolio/project04_zblksv.png'),
+        image:'https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737759663/portfolio/project04_zblksv.png',
         stack:[
             "html",
             "css",
@@ -44,7 +44,7 @@ const slides : Slide[] = [
     {
         id:2,
         title:'Age calculator',
-        image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737759387/portfolio/project03_qhgrwo.png'),
+        image:'https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737759387/portfolio/project03_qhgrwo.png',
         stack:[
             "html",
             "css",
@@ -60,7 +60,7 @@ const slides : Slide[] = [
     {
     id:3,
     title:'E-Commerce Express Clothes',
-    image:require('https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737757990/portfolio/project02_i4moc2.png'),
+    image:'https://res.cloudinary.com/dqzvbdf9r/image/upload/v1737757990/portfolio/project02_i4moc2.png',
     stack:[
         "html",
         "css",
